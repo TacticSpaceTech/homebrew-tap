@@ -1,26 +1,26 @@
 class Tacticremote < Formula
   desc "Control Claude Code from your iPhone/iPad - server component"
   homepage "https://tacticremote.com"
-  version "1.6.0"
+  version "1.6.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/TacticSpaceTech/TacticRemote/releases/download/cli-v1.6.0/tacticremote-darwin-arm64.gz"
-      sha256 "72188256e3dd074c37adcff3de9c651b97c4a71e6ce7ff009e08c28ce733a5bc"
+      url "https://github.com/TacticSpaceTech/TacticRemote/releases/download/cli-v1.6.1/tacticremote-darwin-arm64.gz"
+      sha256 "f069c16494dff587fc2a7a960c69e7f3f5fcbb55d499b7c1f671c5d0f0ec5dd8"
     else
-      url "https://github.com/TacticSpaceTech/TacticRemote/releases/download/cli-v1.6.0/tacticremote-darwin-x64.gz"
-      sha256 "743d799c22a0dfd118d951d362db080bc0ada37421a674fe624f43ed0b13744e"
+      url "https://github.com/TacticSpaceTech/TacticRemote/releases/download/cli-v1.6.1/tacticremote-darwin-x64.gz"
+      sha256 "5dd72dc2ea4553b34457184d473ba1629e9d2346ad579c3c49427eca37cf1698"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/TacticSpaceTech/TacticRemote/releases/download/cli-v1.6.0/tacticremote-linux-arm64.gz"
-      sha256 "3d68ddfa0fd5045088079c253f06e40218f5be3fd4190c7f6cdd0f8d8a750069"
+      url "https://github.com/TacticSpaceTech/TacticRemote/releases/download/cli-v1.6.1/tacticremote-linux-arm64.gz"
+      sha256 "9d2905aad0426353102500d8dcc2e626ec0e504b7edc0f1fd9d958a2b0e2bad8"
     else
-      url "https://github.com/TacticSpaceTech/TacticRemote/releases/download/cli-v1.6.0/tacticremote-linux-x64.gz"
-      sha256 "4a3163a56e8665228a48a528985c4dd6c17371894018815f34edf52b5a932d49"
+      url "https://github.com/TacticSpaceTech/TacticRemote/releases/download/cli-v1.6.1/tacticremote-linux-x64.gz"
+      sha256 "3ba00eec482fca61a24dc5069908e59c59ac6549cf008b9af75224b1f4547c94"
     end
   end
 
