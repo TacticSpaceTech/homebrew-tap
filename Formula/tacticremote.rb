@@ -1,34 +1,42 @@
 class Tacticremote < Formula
-  desc "Control Claude Code from your iPhone/iPad - server component"
+  desc "Control AI coding agents from your iPhone or iPad"
   homepage "https://tacticremote.com"
-  version "1.6.1"
-  license "MIT"
+  version "1.11.0"
+  license :cannot_represent
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/TacticSpaceTech/TacticRemote/releases/download/cli-v1.6.1/tacticremote-darwin-arm64.gz"
-      sha256 "f069c16494dff587fc2a7a960c69e7f3f5fcbb55d499b7c1f671c5d0f0ec5dd8"
+      url "https://registry.npmjs.org/@tacticremote/server-darwin-arm64/-/server-darwin-arm64-1.11.0.tgz"
+      sha256 "e1ba0be10af4332e55f382fa537441f29f11364cbdc09c9bd370fedb11fcd35d"
     else
-      url "https://github.com/TacticSpaceTech/TacticRemote/releases/download/cli-v1.6.1/tacticremote-darwin-x64.gz"
-      sha256 "5dd72dc2ea4553b34457184d473ba1629e9d2346ad579c3c49427eca37cf1698"
+      url "https://registry.npmjs.org/@tacticremote/server-darwin-x64/-/server-darwin-x64-1.11.0.tgz"
+      sha256 "e04f184f96a02d35a1f347a57d68d94db5c28ea6644667e5283273b95d48e205"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/TacticSpaceTech/TacticRemote/releases/download/cli-v1.6.1/tacticremote-linux-arm64.gz"
-      sha256 "9d2905aad0426353102500d8dcc2e626ec0e504b7edc0f1fd9d958a2b0e2bad8"
+      url "https://registry.npmjs.org/@tacticremote/server-linux-arm64/-/server-linux-arm64-1.11.0.tgz"
+      sha256 "3603775b704bed10a03894bb29993851e18c848a9d0fd6fd8cbe4c3b8e7e6206"
     else
-      url "https://github.com/TacticSpaceTech/TacticRemote/releases/download/cli-v1.6.1/tacticremote-linux-x64.gz"
-      sha256 "3ba00eec482fca61a24dc5069908e59c59ac6549cf008b9af75224b1f4547c94"
+      url "https://registry.npmjs.org/@tacticremote/server-linux-x64/-/server-linux-x64-1.11.0.tgz"
+      sha256 "a81b9918a3be70d0667ef4d26b5aa4642d71e3fed5e90a42f70191a3a765462f"
     end
   end
 
   depends_on "tmux"
 
   def install
-    binary_name = "tacticremote-#{OS.mac? ? "darwin" : "linux"}-#{Hardware::CPU.arm? ? "arm64" : "x64"}"
-    bin.install binary_name => "tacticremote"
+    bin.install "bin/tacticremote-server" => "tacticremote"
+    prefix.install "LICENSE"
+  end
+
+  def caveats
+    <<~EOS
+      Install a supported agent CLI and complete its sign-in on this computer.
+      Run tacticremote, then follow the pairing prompts in the iPhone or iPad app.
+      Tactic Remote is proprietary software; see the installed LICENSE.
+    EOS
   end
 
   test do
