@@ -42,6 +42,6 @@ class Tacticremote < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/tacticremote --version").strip
+    assert_match version.to_s, shell_output("\"#{bin}/tacticremote\" --version").strip
   end
 end
