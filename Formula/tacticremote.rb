@@ -1,28 +1,28 @@
 class Tacticremote < Formula
   desc "Control AI coding agents from your iPhone or iPad"
   homepage "https://tacticremote.com"
-  version "1.11.0"
+  version "1.12.0"
   license :cannot_represent
 
   on_macos do
     on_arm do
-      url "https://registry.npmjs.org/@tacticremote/server-darwin-arm64/-/server-darwin-arm64-1.11.0.tgz"
-      sha256 "e1ba0be10af4332e55f382fa537441f29f11364cbdc09c9bd370fedb11fcd35d"
+      url "https://registry.npmjs.org/@tacticremote/server-darwin-arm64/-/server-darwin-arm64-1.12.0.tgz"
+      sha256 "846b28888f17fbbfdb086f091590bda689c579531c7fd7155881c163d558e328"
     end
     on_intel do
-      url "https://registry.npmjs.org/@tacticremote/server-darwin-x64/-/server-darwin-x64-1.11.0.tgz"
-      sha256 "e04f184f96a02d35a1f347a57d68d94db5c28ea6644667e5283273b95d48e205"
+      url "https://registry.npmjs.org/@tacticremote/server-darwin-x64/-/server-darwin-x64-1.12.0.tgz"
+      sha256 "dd1feca705a65d6ff44234d286e3f42a30e0077c520ef4d5cacef64c94058873"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://registry.npmjs.org/@tacticremote/server-linux-arm64/-/server-linux-arm64-1.11.0.tgz"
-      sha256 "3603775b704bed10a03894bb29993851e18c848a9d0fd6fd8cbe4c3b8e7e6206"
+      url "https://registry.npmjs.org/@tacticremote/server-linux-arm64/-/server-linux-arm64-1.12.0.tgz"
+      sha256 "baf0dfaffd2c478181e45be24f78e719569753f4139232be663548d52a585be6"
     end
     on_intel do
-      url "https://registry.npmjs.org/@tacticremote/server-linux-x64/-/server-linux-x64-1.11.0.tgz"
-      sha256 "a81b9918a3be70d0667ef4d26b5aa4642d71e3fed5e90a42f70191a3a765462f"
+      url "https://registry.npmjs.org/@tacticremote/server-linux-x64/-/server-linux-x64-1.12.0.tgz"
+      sha256 "c38196d594dd345fb11cd4d84e33a053b75828fa5583fcb70cbb02a3c713757e"
     end
   end
 
